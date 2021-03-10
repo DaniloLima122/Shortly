@@ -1,0 +1,91 @@
+@use '/src/styles.scss';
+
+.site_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.5rem 1.2rem;
+
+  & > button{
+    color: styles.$grayish-violet;
+    background: none;
+    font-size: 1.2rem;
+  }
+
+  .site_logo{
+    width: 5rem;
+  }
+
+  .menu_list{
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(3.7rem);
+    width: 100%;
+    padding: 0 1.2rem;
+    font-size: 1rem;
+    z-index: 10;
+
+    ul{
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding: 1.5rem 0;
+      list-style-type: none;
+      background: styles.$primary-dark-violet;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 1.2rem;
+      font-weight: 600;
+
+
+      .menu_item{
+        color: #fff;
+      }
+    }
+
+
+    .menu_buttons{
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: styles.$primary-dark-violet;
+      row-gap: .7rem;
+      transform: translateY(-1px);
+      padding: .5rem 0 2rem 0;
+
+
+      &::before{
+        content: "s";
+        position: absolute;
+        width: 75%;
+        margin: 0 auto;
+        height: .5px;
+        background: #fff;
+        opacity: .15;
+        transform: translateY(-.7rem);
+        z-index: 100;
+      }
+
+      button{
+        padding: .6rem .5rem;
+        color: #ffff;
+        border-radius: 50px;
+        font-size: 1rem;
+      }
+      .menu_button_login{
+        font-weight: 700;
+        background: none;
+      }
+      .menu_button_signup{
+        font-weight: 700;
+        width: 85%;
+        background: styles.$primary-cyan;
+      }
+    }
+  }
+
+}

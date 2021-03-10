@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-cyan: hsl(180, 66%, 49%);
+$primary-dark-violet: hsl(257, 27%, 26%);
+
+$secondary-red: hsl(0, 87%, 67%);
+
+$gray: hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+button,a{
+  cursor: pointer;
+}
+
+p{
+  cursor: context-menu;
+}
+
+html,
+body {
+  font-size: 18px;
+  font-family: 'Poppins',sans-serif;
+}

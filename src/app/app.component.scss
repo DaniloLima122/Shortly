@@ -1,0 +1,171 @@
+@use '/src/styles.scss';
+
+.header{
+  // height: 100vh;
+  .banner{
+    overflow: hidden;
+        img{
+          width: 130%;
+          transform: translateX(1rem);
+        }
+
+    h1,p,button{
+      display: block;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    h1{
+      font-size: 1.9rem;
+      max-width: 80%;
+      margin-top: 1rem;
+      color: styles.$primary-dark-violet;
+      font-weight: 700;
+    }
+
+    p{
+      max-width: 88%;
+      font-size: .9rem;
+      color: styles.$grayish-violet;
+    }
+
+    button{
+      background: styles.$primary-cyan;
+      color: #fff;
+      font-weight: 700;
+      width: 10rem;
+      height: 3rem;
+      border-radius: 50px;
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+
+    }
+  }
+}
+
+.form_section{
+  margin-top: 7rem;
+  background: #efefef;
+
+  .section_form_content{
+    display: block;
+    transform: translateY(-5.3rem);
+    margin: 0 auto;
+
+    header{
+      text-align: center;
+      margin-top: 1.5rem;
+
+      h1,p{
+        margin: 0 auto;
+      }
+
+
+
+      h1{
+        max-width: 80%;
+        font-size: 1.3rem;
+        color: styles.$primary-dark-violet
+      }
+
+      p{
+        color: styles.$grayish-violet;
+        font-size: .78rem;
+        margin-top: 1rem;
+        max-width: 80%;
+      }
+    }
+
+    .statistics_cards_container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5rem;
+      row-gap: 5rem;
+      position: relative;
+
+      &::after{
+        content: "asdas";
+        position: absolute;
+        width: .4rem;
+        height: 100%;
+        display: block;
+        background: styles.$primary-cyan;
+        z-index: -1;
+      }
+
+      .statistics_card{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        width: 85%;
+        max-width: 350px;
+        margin: 0;
+        border-radius: 5px;
+
+        .card_image{
+          background-color: styles.$primary-dark-violet;
+          border-radius: 50%;
+          width: 4.5rem;
+          height: 4.5rem;
+          display: grid;
+          place-content: center;
+        }
+
+        .card_image, figcaption{
+
+          transform: translateY(-2.3rem);
+        }
+
+        figcaption{
+          text-align: center;
+          padding: 0 1.1rem;
+
+          h2{
+            font-size: 1.2rem;
+            color: styles.$primary-dark-violet;
+            margin: 1.3rem 0 1rem 0;
+          }
+          p{
+            color: styles.$gray;
+            font-size: .85rem;
+            margin-top: .9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.boost_now_container{
+  background: url('../assets/images/bg-boost-mobile.svg')
+              no-repeat
+              styles.$primary-dark-violet
+              0 45%;
+  background-size: cover;
+  padding: 4rem 1rem;
+
+  h1,button{
+    margin: auto;
+    display: block;
+    text-align: center;
+  }
+
+  h1{
+    font-size: 1.6rem;
+    color: #fff;
+  }
+
+  button{
+    background-color: styles.$primary-cyan;
+    color: #fff;
+    font-weight: 700;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 50px;
+    margin-top: .8rem;
+    font-size: 1.1rem;
+  }
+}

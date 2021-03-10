@@ -1,0 +1,19 @@
+<nav class="site_menu">
+  <img src="assets/images/logo.svg" alt="Shortly Logo" class="site_logo" />
+
+  <button (click)="toggleMenu()">
+    <fa-icon [icon]="menuIcon"></fa-icon>
+  </button>
+
+  <div class="menu_list" [@showHideMenu]="isVisible ? 'isVisible' : 'isHidden'">
+    <ul>
+      <li class="menu_item">Features</li>
+      <li class="menu_item">Pricing</li>
+      <li class="menu_item">Resources</li>
+    </ul>
+    <div class="menu_buttons">
+      <button class="menu_button_login">Login</button>
+      <button class="menu_button_signup">Sign Up</button>
+    </div>
+  </div>
+</nav>
