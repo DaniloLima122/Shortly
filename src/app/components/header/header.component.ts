@@ -11,14 +11,14 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     trigger('showHideMenu', [
       state('isHidden', style({
         opacity: 0,
-        transform: 'translateY(4.5rem)',
+        transform: 'translateY(120px)',
         pointerEvents: 'none',
 
       })),
 
       state('isVisible', style({
         opacity: 1,
-        transform: 'translateY(3.7rem)',
+        transform: 'translateY(75px)',
         pointerEvents: 'all',
       })),
 
