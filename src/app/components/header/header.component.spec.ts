@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NO_ERRORS_SCHEMA, ElementRef } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-describe('HeaderComponent', () => {
+describe.skip('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 

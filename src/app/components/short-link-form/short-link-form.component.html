@@ -1,9 +1,11 @@
-<div class="form-container">
-  <form>
+<div class="form-container" (submit)="ShortLink($event)" >
+  <form [formGroup]="formGroup" #form="ngForm">
     <div class="input_text_container">
-      <input type="text" placeholder="Shorten a link here..." />
-      <span>Please add a link</span>
+  <input #input_link type="text" placeholder="Shorten a link here..."  formControlName="link" [ngClass]="{'field-invalid': getInvalidStatus(form) }"/>
+      <span *ngIf="getInvalidStatus(form)">Please add a link</span>
     </div>
-    <button>Shorten it!</button>
+    <button type="submit">Shorten it!</button>
   </form>
+
+  <s-link-card *ngFor="let shortedLinks of shortedLiksList|async" [links]="shortedLinks"></s-link-card>
 </div>

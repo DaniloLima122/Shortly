@@ -41,7 +41,6 @@
     @media (min-width: 42.6em) {
       width: 7rem;
     }
-
   }
 
   .menu_list {
@@ -67,8 +66,7 @@
       align-items: center;
       flex: 1;
       margin: 0;
-      font-size: .8rem;
-
+      font-size: 0.8rem;
     }
 
     ul {
@@ -94,8 +92,11 @@
         color: #fff;
 
         @media (min-width: 56.8em) {
+          cursor: pointer;
           color: styles.$grayish-violet;
-          // color: styles.$gray;
+          &:hover{
+            border: 1px solid red;
+          }
         }
       }
     }
@@ -113,7 +114,7 @@
 
       @media (min-width: 56.8em) {
         flex-direction: row;
-        column-gap: .5rem;
+        column-gap: 0.5rem;
         align-items: center;
         padding: 0;
         background: none;
@@ -130,12 +131,9 @@
         transform: translateY(-0.8rem);
         z-index: 100;
 
-
         @media (min-width: 56.8em) {
-
           display: none;
         }
-
       }
 
       button {
@@ -144,7 +142,7 @@
         border-radius: 50px;
 
         @media (min-width: 56.8em) {
-          padding: .5rem 1rem;
+          padding: 0.5rem 1rem;
         }
       }
 
@@ -155,21 +153,31 @@
 
         @media (min-width: 56.8em) {
           color: styles.$grayish-violet;
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
       }
+
       .menu_button_signup {
         font-weight: 700;
         width: 85%;
         background: styles.$primary-cyan;
         font-size: 0.9rem;
+        transition: 0.5s ease;
 
-        @media (min-width: 56.8em) {
-
-          font-size: .8rem;
+        &:hover {
+          border: 1px solid red !important;
         }
-      }
 
+        // @media (min-width: 56.8em) {
+
+        //   font-size: .8rem;
+        //   cursor: pointer;
+
+        //   #menu_button_signup:hover{
+        //     opacity: .5 !important;
+        //   }
+        // }
+      }
     }
   }
 }

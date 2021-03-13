@@ -1,0 +1,53 @@
+@use '/src/styles.scss';
+
+.link-card {
+  width: 100%;
+  max-width: 75rem;
+  display: grid;
+  min-height: 4rem;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.2rem 1rem 1.8rem;
+  background: #fff;
+  border-radius: 7px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+
+  @media (min-width: 375px){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1.2rem;
+
+    .link{
+      flex: 1;
+    }
+  }
+
+
+  span {
+    cursor: context-menu;
+  }
+
+  .link {
+    color: styles.$primary-dark-violet;
+  }
+
+  .shorted-link {
+    color: styles.$primary-cyan;
+  }
+
+  button {
+    background: styles.$primary-cyan;
+    color: #fff;
+    height: 2.2rem;
+    width: 5.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.5s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

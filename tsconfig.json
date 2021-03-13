@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
     "baseUrl": "./",
     "paths": {
       "@assets/*": ["./app/src/assets"]
@@ -24,7 +25,6 @@
       "dom"
     ],
     "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
