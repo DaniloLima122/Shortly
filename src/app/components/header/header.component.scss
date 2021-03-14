@@ -88,17 +88,17 @@
         column-gap: 1.2rem;
       }
 
+
       .menu_item {
         color: #fff;
+        display: block;
+
 
         @media (min-width: 56.8em) {
-          cursor: pointer;
           color: styles.$grayish-violet;
-          &:hover{
-            border: 1px solid red;
-          }
         }
       }
+
     }
 
     .menu_buttons {
@@ -163,20 +163,6 @@
         background: styles.$primary-cyan;
         font-size: 0.9rem;
         transition: 0.5s ease;
-
-        &:hover {
-          border: 1px solid red !important;
-        }
-
-        // @media (min-width: 56.8em) {
-
-        //   font-size: .8rem;
-        //   cursor: pointer;
-
-        //   #menu_button_signup:hover{
-        //     opacity: .5 !important;
-        //   }
-        // }
       }
     }
   }

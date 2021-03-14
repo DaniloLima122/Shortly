@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { FormBuilder, FormGroup, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
-import { Links } from '../../Interfaces/Links';
+import { Link } from '../../Interfaces/Link';
+import { ShortLinkService } from 'src/app/services/short-link/short-link.service';
 
 @Component({
   selector: 's-short-link-form',
@@ -10,15 +11,13 @@ import { Links } from '../../Interfaces/Links';
 })
 export class ShortLinkFormComponent implements OnInit {
 
-  shortedLiksList = new BehaviorSubject<Links[]>([{
-    link: "Meu link",
-    shortLink: "Meu link cortado"
-  }])
+  shortedLiksList = new BehaviorSubject<Link[]>([])
 
   formGroup !: FormGroup;
+
   @ViewChild('input_link') input_link !:  ElementRef<HTMLInputElement>;
 
-  constructor(private formBuilder : FormBuilder) {
+  constructor(private formBuilder : FormBuilder, private shortLinkService : ShortLinkService) {
 
   }
 
@@ -31,17 +30,12 @@ export class ShortLinkFormComponent implements OnInit {
     )
   }
 
-
-  getInvalidStatus(formGroupDirective : FormGroupDirective){
-    return this.formGroup.get('link')?.errors?.required && (formGroupDirective.submitted || this.formGroup.get('link')?.touched)
-  }
-
   ShortLink(event: Event){
 
     event.preventDefault();
 
     this.formGroup.valid &&
-    this.shortedLiksList.next(this.shortedLiksList.value.concat([{link: this.formGroup.get("link")?.value, shortLink: "outro link cortado"}]))
+    this.shortLinkService.getShortLink(this.formGroup.get('link')?.value)
 
     this.input_link.nativeElement.focus();
   }

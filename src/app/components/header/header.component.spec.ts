@@ -5,17 +5,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NO_ERRORS_SCHEMA, ElementRef } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
-describe.skip('HeaderComponent', () => {
+describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [ HeaderComponent ],
       imports: [BrowserAnimationsModule],
       schemas: [NO_ERRORS_SCHEMA]
-    })
-    .compileComponents();
+    }).compileComponents();
   });
 
   beforeEach(() => {

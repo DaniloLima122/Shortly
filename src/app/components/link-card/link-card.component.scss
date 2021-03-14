@@ -7,11 +7,10 @@
   min-height: 4rem;
   gap: 1rem;
   align-items: center;
-  padding: 1rem 1.2rem 1rem 1.8rem;
+  padding: .8rem 1.2rem .8rem 1.8rem;
   background: #fff;
   border-radius: 7px;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
 
   @media (min-width: 375px){
     display: flex;
@@ -24,17 +23,20 @@
     }
   }
 
+  .link, .shorted-link{
 
-  span {
-    cursor: context-menu;
+    font-size: 0.9rem;
   }
 
   .link {
     color: styles.$primary-dark-violet;
+    cursor: context-menu;
   }
 
   .shorted-link {
     color: styles.$primary-cyan;
+    text-align: right;
+    pointer-events: none;
   }
 
   button {
@@ -50,4 +52,9 @@
       opacity: 0.7;
     }
   }
+}
+
+.link-copied{
+  background: styles.$primary-dark-violet !important;
+  color: #fff !important;
 }

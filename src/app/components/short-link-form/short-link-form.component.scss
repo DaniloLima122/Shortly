@@ -28,7 +28,7 @@
 
       @media (min-width: 1024px) {
         grid-template-columns: 1fr 180px;
-        padding: 2.8rem 2.8rem 2.5rem 2.8rem;
+        padding: 3.2rem 3.2rem 1.8rem;
         grid-row: 1;
 
         background: url("../../../assets/images/bg-shorten-desktop.svg") no-repeat
@@ -96,6 +96,7 @@
       font-style: italic;
       font-size: 0.65rem;
       color: styles.$secondary-red;
+      opacity: 0;
 
       @media (min-width: 1024px) {
         font-size: .8rem;
@@ -114,4 +115,14 @@
 
 .field-invalid{
   border-color: styles.$secondary-red !important;
+
+  &::placeholder{
+    color: styles.$secondary-red !important;
+    opacity: .4 !important;
+  }
+}
+
+.spanInvalidForm{
+  opacity: 1 !important;
+
 }

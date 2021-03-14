@@ -1,6 +1,7 @@
 <div class="link-card">
-  <span class="link">{{links.link}}</span>
+  <span class="link">{{links.original_link}}</span>
 
-    <span class="shorted-link">{{links.shortLink}}</span>
-    <button>{{"Copy"}}</button>
+    <span class="shorted-link" contenteditable="true">{{links.short_link}}</span>
+    <input type="hidden" value={{links.short_link}} #shorten_link>
+    <button sCopyLink (click)="copyLink()"[cdkCopyToClipboard]="links.short_link" >{{linkCopied ? "Copied!" : "Copy"}}</button>
 </div>

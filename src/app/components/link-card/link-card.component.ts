@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Links } from 'src/app/Interfaces/Links';
+import { Link } from 'src/app/Interfaces/Link';
 
 @Component({
   selector: 's-link-card',
@@ -8,11 +8,22 @@ import { Links } from 'src/app/Interfaces/Links';
 })
 export class LinkCardComponent implements OnInit {
 
-  @Input() links !: Links;
+  @Input() links: Link = {
+    original_link: "",
+    short_link: ""
+  }
+
+  linkCopied = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  copyLink() {
+
+    this.linkCopied = true;
+
   }
 
 }
