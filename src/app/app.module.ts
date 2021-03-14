@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ShortLinkFormModule } from './components/short-link-form/short-link-form.module';
-// import {} from "@angular/"
+import {HttpClientModule} from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { ShortLinkFormModule } from './components/short-link-form/short-link-for
     FormsModule,
     ShortLinkFormModule,
     BrowserAnimationsModule,
+    HttpClientModule
 
   ],
   providers: [],

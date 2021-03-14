@@ -21,7 +21,7 @@
         >Please add a link</span
       >
     </div>
-    <button type="submit">Shorten it!</button>
+    <button type="submit" [disabled]="!!loading">{{loading ? "Loading..." : "Shorten it!"}}</button>
   </form>
 
   <s-link-card

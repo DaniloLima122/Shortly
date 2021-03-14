@@ -2,15 +2,16 @@ import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
+import { Link } from 'src/app/Interfaces/Link';
 import { ShortLinkService } from 'src/app/services/short-link/short-link.service';
 import { LinkCardComponent } from '../link-card/link-card.component';
 import { ShortLinkFormComponent } from './short-link-form.component';
-import { Link } from 'src/app/Interfaces/Link';
+import { of, Observable } from 'rxjs';
 
 const linkReturn = { original_link: "google.com", short_link: "shrtco.de" };
 
 const serviceMock = {
-  getShortLink: (link: string): Link => (linkReturn)
+  getShortLink: (link: string): Observable<Link> => (of(linkReturn))
 }
 
 
@@ -73,7 +74,7 @@ describe('ShortLinkFormComponent', () => {
 
   })
 
-  test("should call service if form is valid", () => {
+  test("should call service if form is valid", (done) => {
 
     component.formGroup.get("link")?.setValue("google.com");
 
@@ -83,9 +84,10 @@ describe('ShortLinkFormComponent', () => {
 
     form.nativeElement.submit();
 
+    done();
+
     expect(spyServicegetLinks).toHaveBeenCalled();
     expect(spyServicegetLinks).toBeCalledWith("google.com");
-    expect(spyServicegetLinks).toReturnWith(linkReturn);
   })
 
 });

@@ -90,6 +90,13 @@
         filter: brightness(110%) hue-rotate(1deg);
       }
 
+      &:disabled{
+        background: #a4d2d2;
+
+        &:hover{
+          filter: none;
+        }
+      }
 
     }
     span {

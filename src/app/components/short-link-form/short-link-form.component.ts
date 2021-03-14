@@ -15,6 +15,8 @@ export class ShortLinkFormComponent implements OnInit {
 
   formGroup !: FormGroup;
 
+  loading = false;
+
   @ViewChild('input_link') input_link !:  ElementRef<HTMLInputElement>;
 
   constructor(private formBuilder : FormBuilder, private shortLinkService : ShortLinkService) {
@@ -32,11 +34,21 @@ export class ShortLinkFormComponent implements OnInit {
 
   ShortLink(event: Event){
 
+    this.loading = this.formGroup.valid && true;
+
     event.preventDefault();
 
     this.formGroup.valid &&
     this.shortLinkService.getShortLink(this.formGroup.get('link')?.value)
+    .subscribe(apiResult => {
+      this.shortedLiksList.next(this.shortedLiksList.value.concat(apiResult.result))
+      this.loading = false;
+    })
 
+    this.focusOnInput();
+  }
+
+  focusOnInput(){
     this.input_link.nativeElement.focus();
   }
 }
