@@ -55,6 +55,7 @@
     @media (min-width: 42.6em) {
       margin-top: 1.5rem;
       padding: 0 1.8rem;
+      pointer-events: all !important;
     }
 
     @media (min-width: 56.8em) {
@@ -88,17 +89,19 @@
         column-gap: 1.2rem;
       }
 
-
       .menu_item {
         color: #fff;
         display: block;
-
+        cursor: pointer;
+        transition: .5s ease;
 
         @media (min-width: 56.8em) {
           color: styles.$grayish-violet;
+          &:hover {
+            color: styles.$primary-dark-violet;
+          }
         }
       }
-
     }
 
     .menu_buttons {
@@ -121,7 +124,7 @@
       }
 
       &::before {
-        content: "s";
+        content: "";
         position: absolute;
         width: 75%;
         margin: 0 auto;
@@ -163,6 +166,10 @@
         background: styles.$primary-cyan;
         font-size: 0.9rem;
         transition: 0.5s ease;
+
+        &:hover{
+          opacity: .7;
+        }
       }
     }
   }

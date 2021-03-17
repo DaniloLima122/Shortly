@@ -21,7 +21,10 @@
         >Please add a link</span
       >
     </div>
-    <button type="submit" [disabled]="!!loading">{{loading ? "Loading..." : "Shorten it!"}}</button>
+    <button type="submit" [disabled]="!!loading">
+      <label class="loading-spinner" *ngIf="loading"></label>
+      <label *ngIf="!loading">Shorten it!</label>
+    </button>
   </form>
 
   <s-link-card
