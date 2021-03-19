@@ -12,7 +12,7 @@
   border-radius: 7px;
   margin-bottom: 1rem;
 
-  @media (min-width: 375px){
+  @media (min-width: 500px){
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,6 +20,20 @@
 
     .link{
       flex: 1;
+    }
+  }
+
+  @media (max-width: 499px){
+    padding: 1rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .link{
+      flex: 1;
+      width: 100%;
+      padding-bottom: .7rem;
+      border-bottom: 1px solid #cccc;
     }
   }
 
@@ -47,6 +61,11 @@
     border-radius: 5px;
     font-weight: 600;
     transition: 0.5s ease;
+
+    @media (max-width: 499px){
+
+      width: 100%;
+    }
 
     &:hover {
       opacity: 0.7;
