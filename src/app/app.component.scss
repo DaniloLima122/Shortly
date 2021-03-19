@@ -126,7 +126,7 @@
 .form_section {
   margin-top: 10rem;
   background: #efefef;
-  padding-bottom: 7vw;
+  padding-bottom:7vw;
 
   @media (min-width: 1024px) {
     margin-top: 10rem;
@@ -305,12 +305,13 @@
   background: url("../assets/images/bg-boost-mobile.svg") no-repeat
     styles.$primary-dark-violet 0 45%;
   background-size: cover;
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 
   @media (min-width: 1024px) {
     background: url("../assets/images/bg-boost-desktop.svg") no-repeat
-      styles.$primary-dark-violet 0 45%;
+    styles.$primary-dark-violet 0 45%;
     background-size: cover;
+    padding: 4rem 1rem;
   }
 
   h1,
@@ -321,7 +322,7 @@
   }
 
   h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #fff;
   }
 
@@ -329,16 +330,16 @@
     background-color: styles.$primary-cyan;
     color: #fff;
     font-weight: 700;
-    width: 10rem;
+    width: 13rem;
     height: 3rem;
     border-radius: 50px;
     margin-top: 0.8rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 
     transition: 0.5s ease;
 
     &:hover {
-      // filter: brightness(110%) hue-rotate(1deg);
+      filter: brightness(110%) hue-rotate(1deg);
     }
   }
 }
