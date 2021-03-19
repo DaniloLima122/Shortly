@@ -134,11 +134,11 @@
 
   .section_form_content {
     display: block;
-    transform: translateY(-5.3rem);
+    transform: translateY(-7vh);
     margin: 0 auto;
 
     @media (min-width: 1024px) {
-      transform: translateY(-5.8rem);
+      transform: translateY(-6.8rem);
     }
 
     @media  (min-width: 768px) and (max-width: 1024px) {
